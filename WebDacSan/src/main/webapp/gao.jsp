@@ -1,4 +1,5 @@
 <%@ page pageEncoding="utf-8"%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -111,11 +112,10 @@
       </div>
       <!-- Giới thiệu từng loại -->
       <div class="mota-phanloai" >
-        <h2 >&emsp;Người dân tộc sinh sống tại vùng núi cao Tây Bắc thường phải đi làm nương ở xa nhà. Có những khoảng thời gian họ đi khỏi nhà đến cả tháng trời. Chính vì vậy người dân tộc Thái Đen đã sáng tạo ra món “<a href="#"><em><strong>Thịt khô gác bếp</strong></em></a>” và cơm lam để dành cho những lúc đi đường xa.</h2>
-        <h2 >&emsp;<a href="#"><b>Thịt khô gác bếp</b></a> thường được làm từ bắp của những chú trâu, bò, lợn thả rông trên khắp các vùng núi đồi Tây Bắc. Khi làm, người dân tộc đã lọc các thớ thịt ra thành từng miếng dọc thớ, hình chữ nhật rồi ướp gia vị theo một công thức đặc biệt, không thể thiếu vị mắc khén của người dân tộc Thái Đen. Thịt ngấm gia vị được gác lên bếp, hun bằng khói của than củi. Đây cũng là lý do mà dù ta có tự làm thịt khô, thịt gác bếp nhưng hương vị cũng không thể ngon và đặc biệt như <strong>Thịt khô gác bếp đặc sản của vùng Tây Bắc</strong>.</h2>
-        <h2 >&emsp;Thịt khô gác bếp được chế biến hoàn toàn tự nhiên, không có chất bảo quản nhưng vẫn để dự trữ được trong vòng 6 tháng. Trước khi thành phẩm, sản phẩm này được hấp chín, đảm bào thịt chín 100%. Khi ăn, có vị thơm của thịt và khói quện với nhau và hòa vào hương mắc khén đặc trưng tạo ra hương vị riêng đậm, ngọt mà cay cay khiến bất kì thực khách nào ăn qua một lần đều muốn ăn lại lần nữa.</h2>
-        <h2 >&emsp;Mời các bạn đến với <strong>Đặc sản Tây Bắc</strong> của chúng tôi để được thưởng thức món <strong>Thịt khô gác bếp</strong> thơm ngon mà đảm bảo chất lượng tốt nhất!</h2>
-        <h2 >&emsp;NHỮNG SẢN PHẨM THỊT KHÔ GÁC BẾP</h2>
+        <h2 >&emsp;Được ôm ấp bởi núi đồi Tây Bắc, cánh đồng Mường Thanh nằm gọn trong lòng núi như nàng Ban e ấp được che chở vòng tay rắn chắc của chàng Khum.</h2>
+        <h2 >&emsp;Chính sự êm dịu, yên bình ấy đã vun đắp lên những hạt gạo thơm ngon nhất – những hạt gạo kết tinh của núi, của rừng, của dòng sông Nậm Rốm mộng mơ và còn là của tình yêu ngọt ngào của nàng Ban và chàng Khum, của núi rừng mờ sương. Yên an trong lòng chảo, những Cây lúa Tám thơm kết những hạt <strong> Gạo tám thơm</strong>  ngọt lành, tỏa hương, quyến rũ bao thực khách gần xa. Lưng chừng núi, những cây lúa nếp nương nằm gọn trong lòng những ruộng bậc thang thơ mộng cho những hạt Gạo nếp nương thơm dẻo và những hạt gạo nếp cẩm giàu dinh dưỡng. Những hạt ngọc này đã tạo nên đặc sản riêng chỉ có ở Điện Biên như một đặc trưng riêng của núi, của đồi, của tình yêu và sức sống.</h2>
+        <h2 >&emsp;<strong> Gạo Điện Biên</strong>, tự muôn đời nay đã nổi tiếng khắp nơi với vị thơm dẻo, ngọt lành. Không phải tự nhiên mà gạo Điện Biên lại có vị thơm ngọt đặc biệt như vậy, đó là vì cây lúa tám thơm được gieo trồng trên cánh đồng Mường Thanh màu mỡ, được tưới mát bằng dòng sông Nậm Rốm chở nặng phù sa. Nhờ vậy, hạt gạo Điện Biên đã trở thành một đặc sản của vùng núi Tây Bắc mà không nơi nào có được.</h2>
+        <h2 >&emsp;NHỮNG SẢN PHẨM GẠO ĐIỆN BIÊN</h2>
     </div>
 
       <!-- sản phẩm từng loại -->
@@ -123,103 +123,23 @@
 
         <div class="noidung">
             <div class="noidung-item">
-              <img src="https://dacsantaybac.org/wp-content/uploads/2015/03/thit-kho-gac-bep-ngon-2-1.jpg" alt="">
+           	<c:forEach var="sanpham" items="${danhsach}">
+            
+              <img src="${sanpham.anh}" alt="">
               <div class="product1">
                 <div class="tieude-sanpham">
-                  <li class="category">Thịt khô gác bếp</li>
-                  <li class="name"><h5>Thịt trâu gác bếp</h5></li>
-                  <li class="price">300.000<sup>đ</sup></li>
+                  <li class="category">Gạo Đặc Sản</li>
+                  <li class="name"><h5>${sanpham.tenSp}</h5></li>
+                  <li class="price">${sanpham.gia}<sup>đ</sup></li>
                 </div>
                 <!-- <button><a href="">Thêm vào giỏ</a></button> -->
                 <div class="button-add">
                   <a href="">Thêm vào giỏ</a>
                 </div>
               </div>
+              	     </c:forEach>
             </div>
         </div>
-        <div class="noidung">
-          <div class="noidung-item">
-            <img src="https://dacsantaybac.org/wp-content/uploads/2015/03/lap-suon-gac-bep.jpg" alt="">
-            <div class="product1">
-              <div class="tieude-sanpham">
-                <li class="category">Thịt khô gác bếp</li>
-                <li class="name"><h5>Thịt trâu gác bếp</h5></li>
-                <li class="price">300.000<sup>đ</sup></li>
-              </div>
-              <!-- <button><a href="">Thêm vào giỏ</a></button> -->
-              <div class="button-add">
-                <a href="">Thêm vào giỏ</a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="noidung">
-          <div class="noidung-item">
-            <img src="mat-ong-rung-chuan-1.jpg" alt="">
-            <div class="product1">
-              <div class="tieude-sanpham">
-                <li class="category">Thịt khô gác bếp</li>
-                <li class="name"><h5>Thịt trâu gác bếp</h5></li>
-                <li class="price">300.000<sup>đ</sup></li>
-              </div>
-              <!-- <button><a href="">Thêm vào giỏ</a></button> -->
-              <div class="button-add">
-                <a href="">Thêm vào giỏ</a>
-              </div>
-            </div>
-          </div>
-      </div>
-        <div class="noidung">
-        <div class="noidung-item">
-          <img src="https://dacsantaybac.org/wp-content/uploads/2015/03/thit-kho-gac-bep-ngon-4.jpg" alt="">
-          <div class="product1">
-            <div class="tieude-sanpham">
-              <li class="category">Thịt khô gác bếp</li>
-              <li class="name"><h5>Thịt trâu gác bếp</h5></li>
-              <li class="price">300.000<sup>đ</sup></li>
-            </div>
-            <!-- <button><a href="">Thêm vào giỏ</a></button> -->
-            <div class="button-add">
-              <a href="">Thêm vào giỏ</a>
-            </div>
-          </div>
-        </div>
-      </div>
-        <div class="noidung">
-          <div class="noidung-item">
-            <img src="https://dacsantaybac.org/wp-content/uploads/2017/08/combo-1-gia-vi-moi-1.jpg" alt="">
-            <div class="product1">
-              <div class="tieude-sanpham">
-                <li class="category">Thịt khô gác bếp</li>
-                <li class="name"><h5>Thịt trâu gác bếp</h5></li>
-                <li class="price">300.000<sup>đ</sup></li>
-              </div>
-              <!-- <button><a href="">Thêm vào giỏ</a></button> -->
-              <div class="button-add">
-                <a href="">Thêm vào giỏ</a>
-              </div>
-            </div>
-          </div>
-      </div>
-      <div class="noidung">
-        <div class="noidung-item">
-          <img src="https://dacsantaybac.org/wp-content/uploads/2015/03/thit-kho-gac-bep-ngon-2-1.jpg" alt="">
-          <div class="product1">
-            <div class="tieude-sanpham">
-              <li class="category">Thịt khô gác bếp</li>
-              <li class="name"><h5>Thịt trâu gác bếp</h5></li>
-              <li class="price">300.000<sup>đ</sup></li>
-            </div>
-            <!-- <button><a href="">Thêm vào giỏ</a></button> -->
-            <div class="button-add">
-              <a href="">Thêm vào giỏ</a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-
-
       </div>     
     </section>
 
