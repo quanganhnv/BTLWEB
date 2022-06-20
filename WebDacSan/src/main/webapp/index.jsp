@@ -23,7 +23,7 @@
             <li><input type="text" placeholder="Tìm kiếm..." /><a class="icon-timkiem" href=""><i class="fa-solid fa-magnifying-glass"></i></a></li>
             <li style="color: red;"><a href=""><i class="fa-solid fa-clock"></i></a> 08:00 - 19:00</li>
             <li style="color: red;"><a href=""><i class="fa-solid fa-phone"></i></a> 0964536256</li>
-            
+            <li class="nhap-xuat"><i class="fa-solid fa-lock"></i><a href="dangnhap.jsp" class="dangnhap">Đăng Nhập</a><span class="gachcheo">/</span><a href="dangky.jsp" class="dangxuat">Đăng Ký</a></li>
           </ul>
         </nav>
       </div>
@@ -34,6 +34,7 @@
           <div class="nut-menu">
             <div class="nut">
               <i class="fas fa-bars" style="font-size: 20px;"></i>
+              <div class="nhap-xuat"><i class="fa-solid fa-lock"></i><a href="dangky.jsp" class="dangnhap">Đăng Nhập</a><span class="gachcheo">/</span><a href="dangky.jsp" class="dangxuat">Đăng Xuất</a></div>
           
             </div>
             <a class="tentrang2">Đặc sản tây bắc</a>
