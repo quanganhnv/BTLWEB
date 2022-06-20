@@ -1,4 +1,5 @@
 <%@ page pageEncoding="utf-8"%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -18,7 +19,7 @@
       <div class="container-bar">
         <nav>
           <ul>
-            <li  ><a class="tentrang" href="index.html">Đặc sản tây bắc</a></li>
+            <li  ><a class="tentrang" href="index.html">Đặc Sản Tây Bắc</a></li>
             <li><input type="text" placeholder="Tìm kiếm..." /><a class="icon-timkiem" href=""><i class="fa-solid fa-magnifying-glass"></i></a></li>
             <li style="color: red;"><a href=""><i class="fa-solid fa-clock"></i></a> 08:00 - 19:00</li>
             <li style="color: red;"><a href=""><i class="fa-solid fa-phone"></i></a> 0964536256</li>
@@ -68,118 +69,26 @@
     <!-- section-product-->
     <section class="sanpham">
       <div class="thung">
-
-        <div class="noidung">
+		<div class="noidung">
             <div class="noidung-item">
-              <a href="">
-                <img src="https://dacsantaybac.org/wp-content/uploads/2015/03/thit-kho-gac-bep-ngon-2-1.jpg" alt="">
-              </a>
+           	<c:forEach var="sanpham" items="${danhsach}">
+            
+              <img src="${sanpham.anh}" alt="">
               <div class="product1">
                 <div class="tieude-sanpham">
                   <li class="category">Thịt khô gác bếp</li>
-                  <li class="name"><h5>Thịt trâu gác bếp</h5></li>
-                  <li class="price">300.000<sup>đ</sup></li>
+                  <li class="name"><h5>${sanpham.tenSp}</h5></li>
+                  <li class="price">${sanpham.gia}<sup>đ</sup></li>
                 </div>
                 <!-- <button><a href="">Thêm vào giỏ</a></button> -->
-                <div class="button-add" onclick="them()">
-                  <a href="#">Thêm vào giỏ</a>
+                <div class="button-add">
+                  <a href="">Thêm vào giỏ</a>
                 </div>
               </div>
+              	     </c:forEach>
             </div>
         </div>
-        <div class="noidung">
-          <div class="noidung-item">
-            <a href="">
-              <img src="https://dacsantaybac.org/wp-content/uploads/2015/03/lap-suon-gac-bep.jpg" alt="">
-            </a>
-            <div class="product1">
-              <div class="tieude-sanpham">
-                <li class="category">Thịt khô gác bếp</li>
-                <li class="name"><h5>Thịt trâu gác bếp</h5></li>
-                <li class="price">300.000<sup>đ</sup></li>
-              </div>
-              <!-- <button><a href="">Thêm vào giỏ</a></button> -->
-              <div class="button-add">
-                <a href="#">Thêm vào giỏ</a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="noidung">
-          <div class="noidung-item">
-            <a href="">
-            <img src="https://dacsantaybac.org/wp-content/uploads/2015/03/lap-suon-gac-bep.jpg" alt="">
-            </a>
-            <div class="product1">
-              <div class="tieude-sanpham">
-                <li class="category">Thịt khô gác bếp</li>
-                <li class="name"><h5>Thịt trâu gác bếp</h5></li>
-                <li class="price">300.000<sup>đ</sup></li>
-              </div>
-              <!-- <button><a href="">Thêm vào giỏ</a></button> -->
-              <div class="button-add">
-                <a href="#">Thêm vào giỏ</a>
-              </div>
-            </div>
-          </div>
-      </div>
-        <div class="noidung">
-        <div class="noidung-item">
-          <a href="">
-            <img src="https://dacsantaybac.org/wp-content/uploads/2015/03/thit-kho-gac-bep-ngon-4.jpg" alt="">
-          </a>
-            <div class="product1">
-            <div class="tieude-sanpham">
-              <li class="category">Thịt khô gác bếp</li>
-              <li class="name"><h5>Thịt trâu gác bếp</h5></li>
-              <li class="price">300.000<sup>đ</sup></li>
-            </div>
-            <!-- <button><a href="">Thêm vào giỏ</a></button> -->
-            <div class="button-add" >
-              <a href="#">Thêm vào giỏ</a>
-            </div>
-          </div>
-        </div>
-      </div>
-        <div class="noidung">
-          <div class="noidung-item">
-          <a href="">  
-            <img src="https://dacsantaybac.org/wp-content/uploads/2017/08/combo-1-gia-vi-moi-1.jpg" alt="">
-          </a> 
-          <div class="product1">
-              <div class="tieude-sanpham">
-                <li class="category">Thịt khô gác bếp</li>
-                <li class="name"><h5>Thịt trâu gác bếp</h5></li>
-                <li class="price">300.000<sup>đ</sup></li>
-              </div>
-              <!-- <button><a href="">Thêm vào giỏ</a></button> -->
-              <div class="button-add">
-                <a href="#">Thêm vào giỏ</a>
-              </div>
-            </div>
-          </div>
-      </div>
-      <div class="noidung">
-        <div class="noidung-item">
-          <a href="">
-            <img src="https://dacsantaybac.org/wp-content/uploads/2015/03/thit-kho-gac-bep-ngon-2-1.jpg" alt="">
-          </a>
-            <div class="product1">
-            <div class="tieude-sanpham">
-              <li class="category">Thịt khô gác bếp</li>
-              <li class="name"><h5>Thịt trâu gác bếp</h5></li>
-              <li class="price">300.000<sup>đ</sup></li>
-            </div>
-            <!-- <button><a href="">Thêm vào giỏ</a></button> -->
-            <div class="button-add">
-              <a href="#">Thêm vào giỏ</a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-
-      
+        
         <h2 style="font-weight: normal; font-size: 15px; text-align: justify; ">Trải qua những đúc kết từ bao đời nay, người dân tộc vùng Tây Bắc đã tạo ra những món ăn riêng rất ngon và hấp dẫn mà không nơi nào có được. Những món ăn này là những “đặc sản” của núi cao, đem hương vị của núi, của rừng, của hồn người Tây Bắc. Với mục đích giới thiệu và cung cấp những mặt hàng đặc sản của vùng núi cao Tây Bắc đến tất cả mọi người, chúng tôi đã thành lập <a href="http://127.0.0.1:5500/web-ban-hang/index.html"><strong>Đại lý đặc sản dân tộc vùng cao Tây Bắc</strong></a></h2>
         <h2 style="font-weight: normal; font-size: 15px; text-align: justify; ">Những mặt hàng đặc sản của đồng bào dân tộc sinh sống ở vùng núi cao Tây Bắc, đặc biệt là dân tộc Thái như <a href="#"> <strong>thịt trâu khô</strong></a>, <a href="#"> <strong>thịt bò khô</strong></a>, <a href="#"> <strong>thịt lợn khô</strong></a>, <a href="#"> <strong>mắc khén</strong></a>, <a href="#"> <strong>chẳm chéo</strong></a>, <a href="#"> <strong>gạo tám Điện Biên</strong></a> … được làm và chế biến một cách thủ công, có rất nhiều khách hàng trên cả nước ưa chuộng.</h2>
         <h2 style="font-weight: normal; font-size: 15px; text-align: justify; ">Với tôn chỉ hoạt động: “Cam kết đảm bảo chất lượng sản phẩm với thái độ phục vụ thân thiện”, chúng tôi đã tạo dựng được uy tín trong lòng khách hàng, thu hút được có nhiều khách hàng quen thuộc thường xuyên lựa chọn và tin tưởng vào Hoàng Lâm.</h2> 
