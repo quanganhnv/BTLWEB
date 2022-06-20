@@ -1,0 +1,985 @@
+@charset "ISO-8859-1";
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: roboto, Helvetica, sans-serif;
+}
+
+/*header*/
+header,
+section {
+    text-align: center;
+    background-color: white;
+}
+
+.container-header {
+    max-width: 100%;
+    margin: 15px auto;
+    position: relative;
+}
+
+.container-header img {
+    width: 100%;
+}
+
+nav {
+    background: white;
+    padding: 12px 0px;
+}
+
+nav ul {
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: center;
+
+}
+
+nav ul li {
+    margin: 10px;
+}
+
+nav ul li a.tentrang {
+    font-size: 35px;
+    font-weight: 700;
+    color: green;
+}
+
+nav ul li input {
+    width: 200px;
+    height: 30px;
+}
+
+ul {
+    list-style: none;
+}
+/* đăng nhập đang xuất */
+nav ul li.nhap-xuat{
+    padding-left: 35px;
+}
+nav ul li.nhap-xuat a{
+    text-decoration: none;
+    color: #34495e;
+}
+nav ul li a {
+    padding-left: 10px;
+    font-size: 15px;
+    font-weight: bold;
+    text-decoration: none;
+    /* display: block; */
+}
+
+.menu_trai {
+    float: left;
+    /* padding-top: 0px; */
+    width: 25%;
+    padding: 40px 10px;
+}
+
+.menu_trai h4 {
+    font-size: 25px;
+    font-weight: 500;
+    padding-bottom: 15px;
+    padding-left: 15px;
+}
+
+.menu_trai ul {
+    padding-left: 30px;
+}
+
+.menu_trai ul li {
+    box-sizing: border-box;
+    text-align: center;
+    display: flex;
+    padding: 10px;
+    border-top: 1px solid #ececec;
+}
+
+.menu_trai ul li a {
+    font-size: 15px;
+    padding: 5px;
+    text-decoration: none;
+    color: #0d6efd;
+    line-height: 1.5;
+}
+
+.menu_trai ul li img {
+    width: 60px;
+    height: 60px;
+}
+
+/* mô tả chi tiết phân loại */
+.menu-bar li a.giohang {
+    border: 0.2mm solid #212529;
+    padding: 5px 12px;
+    border-radius: 0.25rem;
+    font-weight: 400;
+
+}
+
+.menu-bar li a.giohang:hover {
+    background-color: #2d3436;
+    color: white;
+    border-color: white;
+}
+
+.soluonghang {
+    padding-left: 15px;
+    font-size: 13px;
+}
+
+.fa-solid {
+    padding-right: 10px;
+}
+
+
+
+/*menu-bar*/
+.menu-bar {
+    padding: 0px 0px;
+    background-color: rgb(248, 249, 250);
+
+}
+
+.menu-bar ul {
+    display: flex;
+    align-items: center;
+    padding-left: 15px;
+
+}
+
+.menu-bar-content {
+    display: block;
+}
+
+.menu-bar-content ul li {
+    color: green;
+    font-weight: bold;
+    margin: 10px;
+}
+
+.menu-bar-content ul li.timkiem {
+    display: none;
+}
+
+.menu-bar-content ul li a {
+
+    text-decoration: none;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif, Helvetica, sans-serif;
+    color: black;
+    font-weight: normal;
+    font-size: 18px;
+}
+
+.menu-bar-content ul li :hover {
+    color: red;
+}
+
+.nut-menu {
+    display: none;
+}
+
+/*section-slider*/
+/* cho một khoảng max-width để cố định chiều rộng và cho căn lề từ đầu và để margin 2 bên auto 
+ là tự động thay đổi kích thước margin theo các màn hình mà k phải chỉnh nhiều. Chỉ cần chỉnh max-width là oke.
+*/
+.phanloai {
+    text-align: start;
+    max-width: 960px;
+    padding-top: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.tenloai {
+    font-size: 35px;
+}
+
+/*section-product*/
+.thung {
+    text-align: left;
+    max-width: 75%;
+    margin: 0;
+    padding: 40px 20px;
+    line-height: 1.5;
+    font-weight: 350;
+    display: flex;
+}
+
+.khung {
+    margin: 45px 5px 5px 5px;
+    display: flex;
+}
+
+.hinh-anh {
+    width: 35%;
+    padding: 5px 5px 30px;
+}
+
+.thong-tin {
+    width: 65%;
+    padding: 0px 15px 20px;
+    display: inline;
+}
+
+.anh {
+    max-width: 360px;
+    max-height: 310px;
+}
+
+.ten-sp {
+    font-size: 30px;
+    color: #0e6938;
+    padding: 0px 5px 5px;
+}
+
+.gia-sp {
+    font-size: 22px;
+    color: red;
+    padding: 0px 5px 5px;
+}
+
+.mo-ta {
+    font-size: 20px;
+    color: black;
+    padding: 10px 5px 5px;
+    float: left;
+}
+
+/*them-san-pham*/
+.chuc-nang {
+    display: inline-block;
+}
+
+.so-luong {
+    display: inline-flex;
+    padding-right: 20px;
+    padding-bottom: 15px;
+}
+
+.nut {
+    width: 40px;
+    height: 50px;
+    font-size: 30px;
+    align-items: center;
+}
+
+.so-sp {
+    width: 60px;
+    height: 50px;
+    font-size: 30px;
+    text-align: center;
+}
+
+button {
+    width: 260px;
+    height: 50px;
+    font-size: 25px;
+    font-weight: bold;
+    text-align: center;
+    background-color: yellow;
+    border-width: 1px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+}
+
+.nut-toi-gio-hang {
+    max-width: 210px;
+    height: 50px;
+}
+
+.toi-gio-hang {
+    text-decoration: none;
+    color: black;
+}
+
+/*footer*/
+footer {
+    padding: 80px 0;
+    float: left;
+    width: 100%;
+    background-color: #b2bec3
+}
+
+footer h2,
+p {
+    margin-bottom: 15px;
+}
+
+/* responsive */
+/* màn hình nhỏ*/
+@media screen and (max-width: 419px) {
+    nav {
+        display: none;
+    }
+
+    .menu-bar ul {
+        flex-direction: column;
+        display: none;
+
+    }
+
+    .menu-bar ul li {
+        padding-top: 5px;
+        padding-bottom: 5px;
+        margin: 0;
+        border-top: 1px solid #bdc3c7;
+        width: 150px;
+    }
+
+    .menu-bar-content ul li.timkiem {
+        display: block;
+        border: none;
+        padding-bottom: 15px;
+    }
+
+    .menu-bar-content ul li input {
+        width: 100px;
+        font-size: 10px;
+    }
+
+    .icon-timkiem {
+        padding-left: 5px;
+        /* background-color: red; */
+        height: 17px;
+    }
+
+    .menu-bar ul li a {
+        font-size: 10px;
+
+    }
+
+    .menu-bar ul li.gio {
+        padding: 8px;
+    }
+
+    .menu-bar ul li .soluonghang {
+        font-size: 10px;
+    }
+
+    .nut-menu {
+        display: block;
+        padding: 8px;
+    }
+
+    .nut-menu .nut {
+        display: flex;
+        text-align: left;
+    }
+    .menu-bar .nhap-xuat{
+        position: absolute;
+        right: 0px;
+    }
+    .menu-bar .nhap-xuat a{
+        text-decoration: none;
+        color: #34495e;
+    }
+    .nhap-xuat{
+        font-size: 13px;
+    }
+    .tentrang2 {
+        font-size: 30px;
+        color: green;
+    }
+
+    .phanloai {
+        text-align: center;
+    }
+
+    .tenloai {
+        font-size: 1.5rem;
+    }
+
+    .menu-vao {
+        font-size: 0.7rem;
+    }
+
+    .menu_trai {
+        float: none;
+        order: 3;
+        width: 75%;
+        padding-bottom: 50px;
+    }
+
+    .sanpham {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .mota-phanloai {
+        float: none;
+        order: 1;
+        max-width: 100%;
+    }
+
+    .mota-phanloai h2 {
+        font-size: 12px;
+
+    }
+
+    .thung {
+        padding-top: 20px;
+        order: 2;
+        max-width: 100%;
+    }
+
+    .khung {
+        display: block;
+
+    }
+
+    .so-luong,
+    .them-sp,
+    .nut-toi-gio-hang {
+        display: block;
+        padding: 10px 0px 10px;
+    }
+
+    .anh {
+        width: 330px;
+        height: 300px;
+    }
+
+    footer {
+        padding: 30px 0;
+    }
+
+    footer h2 {
+        line-height: 0.8;
+    }
+}
+
+/* điện thoại */
+@media screen and (min-width:420px) and (max-width: 531px) {
+    nav {
+        display: none;
+    }
+
+    .menu-bar ul {
+        flex-direction: column;
+        display: none;
+        margin: 5px auto;
+    }
+
+    .menu-bar ul li {
+        padding-top: 5px;
+        padding-bottom: 5px;
+        margin: 0;
+        border-top: 1px solid #bdc3c7;
+        width: 200px;
+    }
+
+    .menu-bar ul li a {
+        font-size: 13px;
+    }
+
+    .menu-bar ul li.gio {
+        padding: 15px;
+    }
+
+    .menu-bar ul li .soluonghang {
+        font-size: 12px;
+    }
+
+    /* tim kiem */
+    .menu-bar-content ul li.timkiem {
+        display: block;
+        border: none;
+        padding-bottom: 15px;
+    }
+
+    .menu-bar-content ul li input {
+        width: 120px;
+    }
+
+    .icon-timkiem {
+        padding-left: 5px;
+        /* background-color: red; */
+        height: 17px;
+    }
+
+    .nut-menu {
+        margin-top: 8px;
+        display: block;
+        /* text-align: right; */
+        padding: 15px;
+    }
+
+    .nut-menu .nut {
+        display: flex;
+        text-align: left;
+    }
+    .menu-bar .nhap-xuat{
+        position: absolute;
+        right: 0px;
+    }
+    .menu-bar .nhap-xuat a{
+        text-decoration: none;
+        color: #34495e;
+
+    }
+    .nhap-xuat{
+        font-size: 13px;
+    }
+
+    .tentrang2 {
+        font-size: 40px;
+        color: green;
+    }
+
+    .phanloai {
+        text-align: center;
+    }
+
+    .tenloai {
+        font-size: 1.5rem;
+    }
+
+    .menu-vao {
+        font-size: 0.7rem;
+    }
+
+    .menu_trai {
+        float: none;
+        order: 3;
+        width: 75%;
+        padding-bottom: 50px;
+    }
+
+    .sanpham {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .mota-phanloai {
+        float: none;
+        order: 1;
+        max-width: 100%;
+    }
+
+    .mota-phanloai h2 {
+        font-size: 12px;
+
+    }
+
+    .thung {
+        padding: 20px 10px 0px 10px;
+        order: 2;
+        max-width: 100%;
+    }
+
+    .noidung {
+        flex-basis: 50%;
+        padding: 0 20px 20px 20px;
+    }
+
+    .tieude-sanpham li.name {
+        font-size: 15px;
+        font-weight: 700;
+        margin-bottom: 6px;
+    }
+
+    .tieude-sanpham li.price {
+        font-size: 15px;
+    }
+
+    .tieude-sanpham li.category {
+        font-size: 10px;
+        margin-bottom: 15px;
+        margin-top: 0;
+    }
+
+    .button-add {
+        margin-bottom: 10px;
+        padding: 10px;
+    }
+
+    .button-add a {
+        border: 0.1mm solid black;
+        padding: 5px;
+        border-radius: 0.25rem;
+        text-decoration: none;
+        font-size: 0.8rem;
+        color: black;
+
+
+    }
+
+    .thung {
+        padding-top: 20px;
+        order: 2;
+        max-width: 100%;
+    }
+
+    .khung {
+        display: block;
+
+    }
+
+    .so-luong,
+    .them-sp,
+    .nut-toi-gio-hang {
+        display: block;
+        padding: 10px 0px 10px;
+    }
+
+    .anh {
+        width: 430px;
+        height: 390px;
+    }
+
+    footer {
+        padding: 40px 0;
+        line-height: 1;
+    }
+}
+
+/* ipad*/
+/* responsive cho ipad */
+@media screen and (min-width: 531px) and (max-width: 739px) {
+    nav ul li a.tentrang {
+        font-size: 30px;
+        text-align: center;
+        color: green;
+        margin-right: 12px;
+    }
+
+    nav ul li input {
+        width: 70px;
+        height: 20px;
+        font-size: 10px;
+    }
+
+    nav ul li {
+        margin: 0;
+        font-size: 12px;
+    }
+
+    nav ul li a.icon-timkiem {
+        padding-left: 2px;
+        font-size: 10px;
+    }
+
+    nav ul li a i.fa-clock,
+    .fa-phone {
+        padding-right: 2px;
+        font-size: 10px;
+    }
+
+    .menu-bar ul {
+        flex-direction: column;
+        display: none;
+    }
+
+    .menu-bar ul li {
+        padding-top: 10px;
+        margin: 0;
+    }
+
+    .menu-bar ul li a {
+        font-size: 15px;
+    }
+
+    .menu-bar ul li.gio {
+        padding: 15px;
+    }
+
+    .menu-bar ul li .soluonghang {
+        font-size: 12px;
+    }
+
+    /* Ảnh bìa  */
+    .phanloai {
+        max-width: 680px;
+    }
+
+    .tenloai {
+        font-size: 25px;
+    }
+
+    .phanloai nav {
+        font-size: 15px;
+    }
+
+    .menu-bar ul li {
+        padding-top: 10px;
+    }
+
+    .menu_trai h4 {
+        font-size: 23px;
+
+    }
+
+    .menu_trai ul li a {
+        font-size: 13px;
+    }
+
+    .nut-menu {
+        display: block;
+        text-align: right;
+        padding: 15px;
+    }
+    .menu-bar .nhap-xuat{
+        display: none;
+       }
+    .tentrang2 {
+        display: none;
+    }
+
+    .thung {
+        justify-content: space-between;
+        padding: 50px 30px;
+        float: right;
+    }
+
+    .noidung {
+        flex-basis: 50%;
+    }
+
+    .tieude-sanpham li.name {
+        font-size: 20px;
+        font-weight: 700;
+        margin-bottom: 6px;
+    }
+
+    .tieude-sanpham li.category {
+        font-size: 10px;
+        margin-bottom: 15px;
+        margin-top: 0;
+    }
+
+    .tieude-sanpham li.price {
+        font-size: 15px;
+    }
+
+    .button-add {
+        margin-bottom: 10px;
+        padding: 20px;
+    }
+
+    .button-add a {
+        border: 0.1mm solid black;
+        padding: 10px;
+        border-radius: 0.25rem;
+        text-decoration: none;
+        font-size: 0.8rem;
+        color: black;
+    }
+
+    .khung {
+        display: block;
+    }
+
+    .hinh-anh {
+        width: 100%;
+    }
+
+    .so-luong,
+    .them-sp,
+    .nut-toi-gio-hang {
+        display: block;
+        padding: 10px 0px 10px;
+    }
+
+    .thong-tin {
+        width: 100%;
+    }
+
+    .anh {
+        width: 350px;
+        height: 320px;
+    }
+}
+
+/* tablet */
+@media screen and (min-width: 740px) and (max-width: 950px) {
+    nav ul li a.tentrang {
+        font-size: 30px;
+        text-align: center;
+        color: green;
+    }
+
+    nav ul li input {
+        width: 150px;
+        height: 30px;
+        font-size: 13px;
+    }
+
+    nav ul li {
+        font-size: 13px;
+    }
+
+    .tieude-sanpham li.price {
+        font-size: 16px;
+    }
+
+    .menu-bar ul {
+        flex-direction: column;
+        display: none;
+    }
+
+    .phanloai {
+        max-width: 680px;
+    }
+
+    .tenloai {
+        font-size: 25px;
+    }
+
+    .phanloai nav {
+        font-size: 15px;
+    }
+
+    .menu-bar ul li {
+        padding-top: 10px;
+    }
+
+    .menu_trai h4 {
+        font-size: 23px;
+
+    }
+
+    .menu_trai ul li a {
+        font-size: 13px;
+    }
+
+    .nut-menu {
+        display: block;
+        text-align: right;
+        padding: 15px;
+    }
+    .menu-bar .nhap-xuat{
+        display: none;
+       }
+    .tentrang2 {
+        display: none;
+    }
+
+    .fas {
+        width: 50px;
+    }
+
+    .noidung {
+        flex-basis: 45%;
+    }
+
+    .khung {
+        display: block;
+    }
+
+    .hinh-anh {
+        width: 100%;
+    }
+
+    .thong-tin {
+        width: 100%;
+    }
+
+    .so-luong,
+    .them-sp,
+    .nut-toi-gio-hang {
+        display: block;
+        padding: 10px 0px 10px;
+    }
+
+    .anh {
+        width: 400px;
+        height: 350px;
+    }
+}
+
+@media screen and (min-width: 950px) and (max-width: 1440px) {
+    nav ul li a.tentrang {
+        font-size: 30px;
+        text-align: center;
+        color: green;
+    }
+
+    nav ul li input {
+        width: 150px;
+        height: 30px;
+        font-size: 13px;
+    }
+
+    nav ul li {
+        font-size: 13px;
+    }
+
+    .tieude-sanpham li.price {
+        font-size: 16px;
+    }
+
+    .menu-bar ul {
+        display: flex;
+        align-items: center;
+        padding-left: 15px;
+
+    }
+
+    .menu-bar-content {
+        display: block;
+    }
+
+
+    .phanloai {
+        max-width: 680px;
+    }
+
+    .tenloai {
+        font-size: 25px;
+    }
+
+    .phanloai nav {
+        font-size: 15px;
+    }
+
+    .menu-bar ul li {
+        padding-top: 10px;
+    }
+
+    .menu_trai h4 {
+        font-size: 23px;
+
+    }
+
+    .menu_trai ul li a {
+        font-size: 13px;
+    }
+
+    .nut-menu {
+        display: none;
+        text-align: right;
+        padding: 15px;
+    }
+    .menu-bar .nhap-xuat{
+        display: none;
+       }
+    .tentrang2 {
+        display: none;
+    }
+
+    .fas {
+        width: 50px;
+    }
+
+    .hinh-anh {
+        width: 100%;
+        padding: 5px 5px 5px;
+    }
+
+    .thong-tin {
+        width: 100%;
+    }
+
+    .so-luong,
+    .them-sp,
+    .nut-toi-gio-hang {
+        display: block;
+        padding: 10px 0px 10px;
+    }
+
+    .anh {
+        width: 400px;
+        height: 350px;
+    }
+}
